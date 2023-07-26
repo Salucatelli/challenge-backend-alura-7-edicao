@@ -1,5 +1,7 @@
 # Challenge Backend Alura 7ª Edição
 
+#Jornada Milhas
+
 ## Sobre o Projeto
 
   Este é a minha versão da Challenge de Backend da Alura, onde o principal objetivo é desenvolver uma API que será integrada ao Frontend disponibilizando informações e recursos do banco de dados relacionados a possíveis destinos de viagem, exibindo fotos e um texto chamativo que instiga o usuário a querer visitar aquele destino.
@@ -11,6 +13,8 @@ Além disso, a aplicação também irá disponibilizar recursos sobre depoimento
 - Express
 - Sequelize
 - MySQL
+
+ #
 
 ## Semana 1
 
@@ -65,7 +69,60 @@ Além disso, a aplicação também irá disponibilizar recursos sobre depoimento
 ### Teste
   Todos os testes de funcionamento da API foram realizados utilizando o Postman, um aplicativo que permite fazer requisições HTTP sem a necessidade de um FrontEnd.
 
-> ### Em breve disponibilizarei o código da semana 2 que ainda está em produção. Obrigado por gastar um tempo prestigiando meu trabalho, espero que goste!
+#
+
+## Semana 2
+
+  O desafio da segunda semana consiste em 3 passos:
+  - CRUD de Destinos
+  - Endpoint de busca de destinos
+  - Teste
+
+### **CRUD de Destinos**
+
+ O CRUD de Destinos tem 1 endpoint com 4 metodos HTTP (GET, POST, PUT e DELETE)
+
+  - **"/destinos" GET:**
+  
+    - Essa rota responde um array com todos os destinos cadastrados no banco de dados em formato JSON.
+
+
+  - **"/destinos" POST**
+
+     - Essa rota recebe como parametros um nome (do destino) o preço e uma imagem.
+    
+      ```
+      {
+        "nome": "nome da pessoa",
+        "preco": "numero",
+        "img": "imagem"
+       } 
+      ```
+
+
+- **"/destinos/:id" PUT**
+  - Essa rota recebe como parametro por URL o ID do elemento que deseja ser alterado elementos que deseja ser alterado, e recebe um JSON pelo Body o que deseja ser alterado **(OBS, Não é possivel alterar a imagem)**
+ 
+  ```
+  {
+    "nome": "nome da pessoa",
+    "depoimento": "texto",
+   } 
+  ```
+
+- **"/destinos/:id" DELETE**
+   - Essa rota recebe um id como parametro pela URL, e deleta o destino com o mesmo id que for informado na URL.
+ 
+
+### Endpoint de Destinos
+  Endpoint "/depoimentos?nome="nome do destino", filtra pelo nome do destino.
+
+### Teste
+  Todos os testes de funcionamento da API foram realizados utilizando o Postman, um aplicativo que permite fazer requisições HTTP sem a necessidade de um FrontEnd.
+
+> ### Em breve disponibilizarei o código da semana 3 e 4 que ainda está em produção. Obrigado por gastar um tempo prestigiando meu trabalho, espero que goste!
+
+
 
 
 
