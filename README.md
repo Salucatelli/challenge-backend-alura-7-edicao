@@ -1,6 +1,6 @@
 # Challenge Backend Alura 7ª Edição
 
-#Jornada Milhas
+# Jornada Milhas
 
 ## Sobre o Projeto
 
