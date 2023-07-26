@@ -28,7 +28,6 @@ class DepoimentosController {
         data = JSON.parse(data);
 
         const uploadPath = path.join(__dirname, "../", "images", img.name);
-        console.log(__filename);
         img.mv(uploadPath, function (error) {
             if (error) return console.log(error);
         })
@@ -64,12 +63,18 @@ class DepoimentosController {
 
     static async apagarDepoimento(req, res, next) {
         const id = req.params.id;
+        const imgPath = path.join(__dirname, "../", "images/");
 
         try {
             const data = await Depoimentos.findOne({ where: { id: Number(id) } })
             if (!data) {
                 throw new Error("ERRO, Depoimento não encontrado");
             }
+            const img = data.dataValues.img;
+            fs.unlink(imgPath + img, function (err) {
+                if (err) throw err;
+                console.log("Arquivo Deletado")
+            })
 
             await Depoimentos.destroy({ where: { id: Number(id) } });
 

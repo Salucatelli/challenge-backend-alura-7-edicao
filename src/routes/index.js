@@ -1,10 +1,12 @@
 const express = require("express");
 const depoimentos = require("./depoimentos.js");
+const destinos = require("./destinos.js");
 
 const router = (app) => {
     app.use(
         express.json(),
-        depoimentos
+        depoimentos,
+        destinos
     );
     //Main Route
     app.get("/", (req, res) => {
