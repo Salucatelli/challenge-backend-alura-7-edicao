@@ -16,11 +16,20 @@ module.exports = {
         allowNull: false,
         validate: { len: [0, 32] }
       },
-      preco: {
-        type: Sequelize.FLOAT,
-        alllowNull: false
+      meta: {
+        type: Sequelize.STRING,
+        alllowNull: false,
+        validate: { len: [0, 160] }
       },
-      img: {
+      texto_descritivo: {
+        type: Sequelize.STRING,
+        alllowNull: true
+      },
+      img1: {
+        type: Sequelize.STRING,
+        allowNull: false
+      },
+      img2: {
         type: Sequelize.STRING,
         allowNull: false
       },
@@ -33,7 +42,6 @@ module.exports = {
         allowNull: false
       }
     });
-
   },
 
   async down(queryInterface, Sequelize) {

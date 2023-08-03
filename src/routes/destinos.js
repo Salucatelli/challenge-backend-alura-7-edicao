@@ -5,6 +5,7 @@ const router = express.Router();
 
 //GET Routes
 router.get("/destinos", DestinosController.verDestinos);
+router.get("/destinos/:id", DestinosController.verDestinoPorId);
 
 
 //POST Routes

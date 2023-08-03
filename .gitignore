@@ -2,3 +2,6 @@ node_modules
 .env
 database.js
 public
+*.png
+*.jpg
+*.jpeg
