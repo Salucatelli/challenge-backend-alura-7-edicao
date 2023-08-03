@@ -120,7 +120,36 @@ Além disso, a aplicação também irá disponibilizar recursos sobre depoimento
 ### Teste
   Todos os testes de funcionamento da API foram realizados utilizando o Postman, um aplicativo que permite fazer requisições HTTP sem a necessidade de um FrontEnd.
 
-> ### Em breve disponibilizarei o código da semana 3 e 4 que ainda está em produção. Obrigado por gastar um tempo prestigiando meu trabalho, espero que goste!
+##
+## Semanas 3 e 4
+
+Os desafios das semanas 3 e 4 são:
+  - Atualizar os esquema de Destinos
+  - Endpoint de destinos pelo ID
+  - Integração com IA
+
+  ### Nova versão de Destinos
+
+  Agora os detinos tem novas características, são elas:
+
+  ```
+    "id": Número gerado automaticamente pelo banco de dados,
+    "nome": "Nome do Destino",
+    "meta": "meta",
+    "texto_descritivo": "Texto que descreve o destino (se não for passado nenhum texto, ele será gerado autmoaticamente pela AI",
+    "img1": "Primeira Imagem",
+    "img2": "Segunda Imagem"
+  ```
+
+### Endpoint de destinos pelo ID
+
+Esse endpoind  | */destinos/'id'* |  busca um destino pelo seu ID
+
+### Integração com IA
+
+O texto_descritivo do destino pode ser escrito na hora de ser cadastrado, porem, se nada for informado, o programa irá gerar uma descrição automaticamente atravez da OpenAI do ChatGPT apenas com o nome do destino, facilitando o trabalho na hora de cadastrar os destinos.
+
+> ### Muito Obrigado por gastar um tempo olhando meu projeto. Estou aberto a sugestões de mudanças e melhorias.
 
 
 
