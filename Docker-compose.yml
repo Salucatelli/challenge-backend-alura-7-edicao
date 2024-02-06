@@ -1,0 +1,34 @@
+version: "3.1"
+
+services:
+  db:
+    image: mysql:latest
+    container_name: "mysql"
+    restart: always
+    command: --default-authentication-plugin=mysql_native_password
+    tty: true
+    environment:
+      - MYSQL_ROOT_PASSWORD=root 
+      - MYSQL_DATABASE=challengedb
+      - MYSLQ_USER=root
+    networks:
+      - node-network 
+    ports:
+      - "3307"
+      
+  app:
+    build:
+      context: .
+    container_name: app
+    networks:
+      - node-network
+    volumes:
+      - .:/usr/src/app
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
+
+networks:
+  node-network:
+    driver: bridge
